@@ -1,0 +1,35 @@
+<%- include ('partials/header') %>
+
+
+
+
+<div class="ui text main container segment">
+    <div class="ui huge header"><h1><%=foundBlog.name%></h1></div>
+    <div class="ui top attached segment">
+        <div class="ui item">
+            <div class="ui huge image">
+                <image src="<%=foundBlog.image%>"></image>
+            </div>
+            <div class="meta">
+                <p><%=foundBlog.dateCreated%></p>
+            </div>
+            <div class="container">
+                <p><%=foundBlog.blog%></p>
+            </div>
+            <div class="extra">
+                <a class="ui basic button yellow"href="/blog/<%=foundBlog._id%>/edit">Edit</a>
+            </div>
+            <form id="inline" action="/blog/<%=foundBlog._id%>?_method=DELETE" method="POST">
+                <button class="ui basic button red">Delete</button>
+            </form>
+    </div>
+    
+    </div>
+    
+    
+</div>
+
+
+
+
+<%- include ('partials/footer') %>
